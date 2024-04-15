@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  color: #242424;
+  text-align: center;
+  line-height: 1.25;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* NAVIGATION BAR */
+
+li {
+  list-style-type: none;
+}
+
+nav {
+  height: 100px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link--anchor {
+  margin: 0 12px;
+  color: #242424;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+  background-color: #6030b1;
+  padding: 8px 20px;
+  border-radius: 50px;
+  color: white;
+}
+
+.nav__link--anchor-primary:hover {
+  background-color: #5d3eff;
+}
+
+.personal__logo {
+  font-size: 24px;
+  color: #6030b1;
+  margin: 0 12px;
+  font-weight: bold;
+}
+
+/*
+
+#8D021F and #CB102E for button colors
+background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+^^^For background
+Need pictures of you in this workspace.
+save+commit this 
+Stopped at aboutme*/
