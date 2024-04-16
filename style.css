@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: grey;
+}
+
 h1,
 h2,
 h3,
@@ -11,20 +15,55 @@ h4,
 h5,
 h6,
 span {
-  color: #242424;
+  color: #ffffff;
   text-align: center;
   line-height: 1.25;
 }
 
+h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
 p {
+  color: #ffffff;
   line-height: 1.5;
   font-size: 16px;
 }
 
+section:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.section__title {
+  margin-bottom: 20px;
+}
+
+.container {
+  padding: 50px 0;
+}
 /* NAVIGATION BAR */
 
 li {
   list-style-type: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.row {
+  width: 100%;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.text--purple {
+  color: #8d021f;
 }
 
 nav {
@@ -43,34 +82,129 @@ nav {
 
 .nav__link--anchor {
   margin: 0 12px;
-  color: #242424;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
 }
 
 .nav__link--anchor-primary {
-  background-color: #6030b1;
+  background-color: #8d021f;
   padding: 8px 20px;
   border-radius: 50px;
   color: white;
 }
 
 .nav__link--anchor-primary:hover {
-  background-color: #5d3eff;
+  background-color: #cb102e;
 }
 
 .personal__logo {
   font-size: 24px;
-  color: #6030b1;
+  color: #8d021f;
   margin: 0 12px;
   font-weight: bold;
 }
+/* ABOUT ME*/
+#about-me {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-/*
+.about-me__info {
+  display: flex;
+  flex-direction: column;
+}
 
-#8D021F and #CB102E for button colors
-background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
-^^^For background
-Need pictures of you in this workspace.
-save+commit this 
-Stopped at aboutme*/
+.about-me__info--container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-me__picture--mask {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  margin-bottom: 28px;
+}
+
+.about-me__picture {
+  width: 100%;
+
+  /* Improving Picture */
+
+  transform: scale(2);
+  padding-right: 22px;
+}
+
+.about-me__info--para {
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+.about-me__info--title {
+  margin-bottom: 16px;
+}
+
+.about-me__img--container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.about-me__img {
+  width: 100%;
+}
+
+/* TECH STACK */
+
+.language__img {
+  width: 100%;
+  max-width: 100px;
+  transition: all 300ms;
+}
+
+.language:hover .language__img {
+  filter: brightness(80%);
+  opacity: 0.86;
+  transform: scale(0.9);
+}
+.language {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.language__img--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 16px;
+}
+
+.language__list {
+  display: flex;
+  width: 100%;
+}
+
+.language__name {
+  position: absolute;
+  bottom: 0;
+  transform: scale(0);
+  opactiy: 0;
+  transition: all 500ms ease;
+  font-size: 20px;
+}
+
+.language:hover .language__name {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Left Off On Projects Portion */
