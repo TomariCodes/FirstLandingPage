@@ -15,9 +15,9 @@ h4,
 h5,
 h6,
 span {
-  color: #ffffff;
   text-align: center;
   line-height: 1.25;
+  color: #ffffff;
 }
 
 h1 {
@@ -31,8 +31,12 @@ p {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+}
+
 section:nth-child(even) {
-  background-color:  #0D0907;
+  background-color: #0d0907;
 }
 
 .section__title {
@@ -42,6 +46,7 @@ section:nth-child(even) {
 .container {
   padding: 50px 0;
 }
+
 /* NAVIGATION BAR */
 
 li {
@@ -74,6 +79,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 12px;
 }
 
 .nav__link--list {
@@ -191,6 +197,7 @@ nav {
 .language__list {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 .language__name {
@@ -207,4 +214,212 @@ nav {
   opacity: 1;
 }
 
-/* Left Off On Projects Portion */
+/*PROJECTS SECTION*/
+
+.project {
+  margin-bottom: 135px;
+}
+
+.project:last-child {
+  margin-bottom: 48px;
+}
+
+.project__img {
+  width: 100%;
+  transition: all 450ms ease;
+}
+
+.project__wrapper {
+  display: flex;
+  box-shadow: 0 20px 80px rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project__wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: opacity 450ms ease;
+  z-index: 2;
+}
+
+.projects:hover .project__wrapper:before {
+  opacity: 0.6;
+}
+
+.projects:hover .project__img {
+  transform: scale(1.07);
+  filter: blur(5px);
+}
+
+.projects:hover .project__description {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.project__list {
+  padding-top: 40px;
+}
+
+.project__description {
+  position: absolute;
+  top: 50%;
+  transform: translateY(100%);
+  left: 90px;
+  z-index: 3;
+  opacity: 0;
+  transition: all 400ms ease;
+}
+.project__description--title {
+  font-size: 36px;
+}
+
+.project__description--subtitle {
+  font-size: 20px;
+}
+
+.project__description--para {
+  font-size: 16px;
+}
+
+.project__description--title,
+.project__description--subtitle,
+.project__description--para,
+.project__description--links {
+  text-align: left;
+  color: #000000;
+}
+.project__description--link {
+  font-size: 20px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+/* 
+
+/FOOTER/ 
+
+*/
+
+footer {
+  background-color: #242424;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8% 0;
+}
+
+.footer__logo--img {
+  width: 85px;
+  height: 85px;
+  margin-left: 20px;
+}
+
+.footer__social--link,
+.footer__copywrite--logo,
+.footer__logo--popper {
+  color: #fff;
+}
+
+.footer__social--list {
+  margin-bottom: 20px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__row {
+  margin-bottom: 28px;
+}
+
+.footer__logo--popper {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-size: 30px;
+  transition: all 450ms ease;
+  opacity: 0;
+}
+
+.footer__anchor {
+  position: relative;
+  margin-bottom: 20px;
+}
+.footer__anchor:hover .footer__logo--popper {
+  transform: translateX(60px);
+  opacity: 1;
+}
+
+/*Small phones, tablets, large smartphones*/
+
+@media (max-width 768px) {
+nav {
+  height: 68px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+.about-me__info--para {
+  font-size: 18px;
+}
+.language {
+  width: calc(100% / 3);
+}
+
+}
+
+/*Good on phones*/
+
+/* Off On Projects Portion
+div containers are to cap the top and bottom and the div row are to cap the left and right */
+
+/*
+FOR LATER PROJECTSSSS
+ <li class="projects">
+              <div class="project__wrapper">
+                <img
+                  src="./Assets/Favorite__Song--Project-fixed.png"
+                  class="project__img"
+                  alt="A practice website I made about my favorite song"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    My Favorite Song Website
+                  </h3>
+                  <h4 class="project__description--subtitle">
+                    <div class="project__description--subtitle">HTML Javascript CSS</div>
+                    <em class="project__description--subtitle">(Practice Website)</em>
+                  </h4>
+                  <p class="project__description--para">
+                    A simple page I made to practice the three languages I
+                    learned, much like this one is.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/TomariCodes"
+                      class="project__description--link"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-github" style="color: #000000;"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+*/
