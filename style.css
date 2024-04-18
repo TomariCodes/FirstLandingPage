@@ -172,6 +172,25 @@ nav {
   animation: fade-up 600ms;
 }
 
+.wave {
+  display: inline-block;
+  animation: animate-wave 500ms infinite ease-in-out;
+  /* cant rotate inline elements*/
+}
+
+@keyframes animate-wave {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+  100 {
+    transform: rotate(0);
+  }
+}
+
 .about-me__img--container {
   flex: 1;
   display: flex;
