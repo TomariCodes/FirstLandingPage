@@ -181,10 +181,11 @@ nav {
   transform: scale(0.9);
 }
 .language {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: center;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .language__img--wrapper {
@@ -198,6 +199,7 @@ nav {
   display: flex;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .language__name {
@@ -364,22 +366,48 @@ footer {
 
 /*Small phones, tablets, large smartphones*/
 
-@media (max-width 768px) {
-nav {
-  height: 68px;
+@media (max-width: 768px) {
+  nav {
+    height: 68px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .about-me__info--para {
+    font-size: 18px;
+  }
+  .language {
+    width: calc(100% / 3);
+  }
+
+  .project__description--para {
+    font-size: 14px;
+  }
+
+  .project__description {
+    padding-right: 30px;
+    left: 30px;
+  }
+
+  .project__wrapper {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+  }
 }
 
-h1 {
-  font-size: 28px;
-}
+@media (max-width: 480px) {
+  .nav__link:not(:last-child) {
+    display: none;
+  }
 
-.about-me__info--para {
-  font-size: 18px;
-}
-.language {
-  width: calc(100% / 3);
-}
-
+  .language__img {
+    width: 75px;
+    max-width: 100%;
+    /*finish fixing the technology stack*/
+  }
 }
 
 /*Good on phones*/
