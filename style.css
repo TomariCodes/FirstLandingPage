@@ -138,6 +138,19 @@ nav {
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.16);
   margin-bottom: 28px;
+  animation: animate-profile-picture 800ms 1s backwards;
+}
+@keyframes animate-profile-picture {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .about-me__picture {
@@ -152,19 +165,47 @@ nav {
 .about-me__info--para {
   font-size: 20px;
   margin-bottom: 28px;
+  animation: fade-up 600ms;
 }
 .about-me__info--title {
   margin-bottom: 16px;
+  animation: fade-up 600ms;
 }
 
 .about-me__img--container {
   flex: 1;
   display: flex;
   align-items: center;
+  animation: cut-in 600ms;
+  padding-right: 45px;
+}
+
+@keyframes cut-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .about-me__img {
   width: 100%;
+}
+
+@keyframes fade-up {
+  0% {
+    opactiy: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* TECH STACK */
@@ -396,6 +437,11 @@ footer {
     display: flex;
     margin: 0 auto;
   }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -407,6 +453,50 @@ footer {
     width: 75px;
     max-width: 100%;
     /*finish fixing the technology stack*/
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .about-me__info--para {
+    font-size: 14px;
+  }
+  .language {
+    width: calc(100% / 3);
+  }
+
+  .project__description--para {
+    font-size: 12px;
+  }
+  .project__description--title {
+    font-size: 18px;
+  }
+
+  .project__description--subtitle {
+    font-size: 10px;
+  }
+  .project__description {
+    padding-top: 30px;
+    left: 30px;
+  }
+
+  .project__wrapper {
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
